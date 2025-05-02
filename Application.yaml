@@ -13,11 +13,10 @@ spec:
         app: project-k8s-deployment
     spec:
       containers:
-      - name: project-k8s-deployment
-        image: tampoohoonm/python-project:latest
-        ports:
-        - containerPort: 5000
-
+        - name: project-k8s-deployment
+          image: ganeshmunna/python-project:latest
+          ports:
+            - containerPort: 5000
 
 ---
 
@@ -30,9 +29,6 @@ spec:
   selector:
     app: project-k8s-deployment
   ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 5000 #container port
-    nodePort: 30080
-
-
+    - protocol: TCP
+      port: 80
+      targetPort: 5000
