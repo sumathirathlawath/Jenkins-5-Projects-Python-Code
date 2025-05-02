@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: project-k8s-deployment
-        image: ganeshmunna/python-project:latest
+        image: tampoohoonm/python-project:latest
         ports:
         - containerPort: 5000
 
